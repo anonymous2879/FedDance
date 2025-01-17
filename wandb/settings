@@ -1,0 +1,5 @@
+[default]
+entity = wandb_user
+project = feddance
+base_url = https://api.wandb.ai
+
