@@ -3,27 +3,24 @@
 
 ## Realistic FL Datasets
 
-***We are adding more datasets! Please feel free to contribute.***
 
-We provide real-world datasets for the federated learning community, and plan to release much more soon! Each is associated with its training, validation and testing dataset. A summary of statistics for training datasets can be found in Table, and you can refer to each folder for more details. Due to the super large scale of datasets, we are uploading these data and carefully validating their implementations to FAR. So we are actively making each dataset available for FAR experiments. 
+We provide real-world datasets for the federated learning community, and plan to release much more soon! Each is associated with its training, validation and testing dataset. A summary of statistics for training datasets can be found in Table. 
 
 CV tasks:
 
 | Dataset   | Data Type   | # of Clients | # of Samples | Example Task | 
 |-----------| ----------- |--------------|--------------|    ----------- |
-| CIFAR10   |   Image     | Custom       | 60K          |   Classification  |    
-| OpenImage |   Image     | 13,771       | 1.3M         |   Classification, Object detection      |
+| CIFAR10   |   Image     | Custom       | 60,000          |   Classification  |    
+| EMNIST    |   Image     | Custom       | 131,600         |   Classification      |
+| Tiny-ImageNet |   Image     | Custom       | 111,000         |   Classification      |
 
 NLP tasks:
 
 | Dataset       | Data Type   |# of Clients  | # of Samples   | Example Task | 
 | -----------   | ----------- | -----------  |  ----------- |   ----------- |
-| Stackoverflow |   Text      |   342,477    |   135M        |  Word prediction, classification |
-| Reddit        |   Text      |  1,660,820   |   351M        |  Word prediction   |
-|Google Speech  |   Audio     |     2,618    |   105K        |   Speech recognition |
+|Google Speech  |   Audio     |     2,618    |   104,667        |   Speech recognition |
 
 
-***Note that no details were kept of any of the participants age, gender, or location, and random ids were assigned to each individual. In using these datasets, we will strictly obey to their licenses, and these datasets provided in this repo should be used for research purpose only. ***
 
 ## Repo Structure
 
@@ -39,12 +36,12 @@ Current Folder
 ### Google Speech Commands
 A speech recognition dataset with over ten thousand clips of one-second-long duration. Each clip contains one of the 35 common words (e.g., digits zero to nine, "Yes", "No", "Up", "Down") spoken by thousands of different people. 
 
-### OpenImage. 
-[OpenImage](https://storage.googleapis.com/openimages/web/index.html) is a vision dataset collected from Flickr, an image and video hosting service. It contains a total of 16M bounding boxes for 600 object classes (e.g., Microwave oven). We clean up the dataset according to the provided indices of clients. 
+### CIFAR10
+The CIFAR10 dataset is a widely used dataset in machine learning and computer vision. It contains 60,000 color images across 10 classes. The dataset is divided into 50,000 training images and 10,000 test images. The images in CIFAR10 are 32x32 pixels in size. 
 
 
-### Reddit and StackOverflow
-Reddit (StackOverflow) consists of comments from the Reddit (StackOverflow) website. It has been widely used for language modeling tasks, and we consider each user as a client. In our benchmark, we restrict to the 30k most frequently used words, and represent each sentence as a sequence of indices corresponding to these 30k frequently used words. We use Transformers to tokenize these sequences with a block size 64.
+### Tiny-ImageNet
+The Tiny-ImageNet dataset contains 100,000 color images across 200 different classes. Each class in Tiny ImageNet has 500 training images and 50 test images. The images are of size 64x64 pixels. The dataset is intended for image classification tasks and serves as a challenging benchmark for deep learning models.
 
 ### Dataset of System Performance and Availability
 
