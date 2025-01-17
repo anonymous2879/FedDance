@@ -37,13 +37,13 @@ python oort_setup.py install
 ## Running FedDance experiments
 Please go to `./core` directory to understand more how the FL training scripts are invoked.
 
-To run the experiments, we provide a customizable script that can automate launching many experiments at once. The script file in the main directory `run_exps1.sh` can be adjusted as needed to set the various parameters which are documented in the script file.
+To run the experiments, we provide a customizable script that can automate launching many experiments at once. The script file in the main directory `run_exps_feddance.sh` can be adjusted as needed to set the various parameters which are documented in the script file.
 The script takes as input, the dataset (or benchmark) to run and it will run all experiments and assigns to each server in a round robin fashion one experiment at a time until all experiments are launched at the same time. 
 
 
 The experimental results are collected and uploaded automatically via the WANDB visualization tool APIs called [WANDB](wandb.ai). **You should create/have an account on [WANDB](wandb.ai) and from the settings page get the API Key and username to set them in the experiment run scripts as shown next**
 
-In [run_exps.sh](run_exps.sh) script, the IPS list refers to the list of server IPs and the GPUS list refers to number of GPUs per server. 
+In [run_exps_feddance.sh](run_exps_feddance.sh) script, the IPS list refers to the list of server IPs and the GPUS list refers to number of GPUs per server. 
 The remaining settings to be adjusted are well commented in the script file, they are:
 ```
 #the path to the project
@@ -66,7 +66,7 @@ The following is an example of experiment invocation.
 
 ```
 conda activate FedDance
-bash run_exps1.sh cifar10
+bash run_exps_feddance.sh cifar10
 ```
 
 **Note each experiment is launched with its own timestamp and all logs and intermediate models are stored in a folder named after the timestamp**
